@@ -58,7 +58,7 @@ function Carousel () {
           }
           </ul>
         </div>
-        <div className='flex gap-3 text-white absolute bottom-4 left-[50%] translate-x-[-50%]'>
+        <div className='flex gap-3 text-white absolute z-30 bottom-4 left-[50%] translate-x-[-50%]'>
           {
             imagesSlider.map((item, id) => {
               const isThisSlide = currentIndex === id

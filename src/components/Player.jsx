@@ -29,7 +29,7 @@ function Player () {
         data-aos='fade-up'
         data-aos-duration='1000'
         data-aos-easing='ease'
-        className='relative flex flex-col items-center min-w-[320px]'
+        className='relative flex flex-col items-center w-[min(100%,400px)] px-0 sm:px-7'
       >
         <div className='w-[85%] bg-myorange py-2 pb-3 rounded-lg grid place-items-center text-mygray'>
           <strong className='font-dosis uppercase text-xl'> Radio bendición</strong>

@@ -1,10 +1,13 @@
 import { Card, CardHeader, CardBody } from '@nextui-org/card'
 import { Image } from '@nextui-org/image'
 import genres from '../../data/genres'
+import usePage from '../../hooks/usePage'
 
 function ProgramationSection () {
+  const { progSection } = usePage()
+
   return (
-    <section className='section-site bg-mygray py-10 sm:py-20'>
+    <section ref={progSection} className='section-site bg-mygray py-10 sm:py-20'>
       <div className='container px-5 mx-auto'>
         <div className='text-section'>
           <h2

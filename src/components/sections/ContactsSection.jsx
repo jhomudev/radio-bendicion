@@ -1,10 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faWheatAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { rimg1, rimg2, rimg3 } from '../../data/media'
+import usePage from '../../hooks/usePage'
 
 function ContactsSection () {
+  const { contactsSection } = usePage()
+
   return (
-    <section className='section-site bg-white py-10 sm:py-20'>
+    <section ref={contactsSection} className='section-site bg-white py-10 sm:py-20'>
       <div className='container px-5 mx-auto text-right'>
         <div
           className='text-section'

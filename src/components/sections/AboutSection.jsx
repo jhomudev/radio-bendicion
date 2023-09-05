@@ -1,8 +1,11 @@
 import { mision, vision } from '../../data/media'
+import usePage from '../../hooks/usePage'
 
 function AboutSection () {
+  const { aboutSection } = usePage()
+
   return (
-    <section className='section-site bg-mygray py-10 sm:py-20'>
+    <section ref={aboutSection} className='section-site bg-mygray py-10 sm:py-20'>
       <div className='container px-5 mx-auto'>
         <div className='text-section' data-aos='fade-right' data-aos-duration='2000'>
           <h2 className='text-xl font-dosis font-semibold uppercase text-myorange mb-2'>Nosotros</h2>
