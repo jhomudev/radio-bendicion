@@ -20,7 +20,7 @@ function App () {
   }, [])
 
   useEffect(() => {
-    scrollToSection(section)
+    scrollToSection(section.current)
   }, [section])
 
   return (

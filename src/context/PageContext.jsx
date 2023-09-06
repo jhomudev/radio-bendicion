@@ -15,7 +15,6 @@ export default function PageProvider ({ children }) {
       top,
       behavior: 'smooth'
     })
-    console.log(element)
   }
 
   return (
