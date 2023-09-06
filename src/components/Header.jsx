@@ -27,7 +27,7 @@ function Header () {
         className='sm:hidden'
       />
       <NavbarBrand>
-        <Link href='/'>
+        <Link href=''>
           <figure className='w-[100px]'>
             <img className='w-full h-full object-contain' src={logo} alt='logo radio bendicion' />
           </figure>
