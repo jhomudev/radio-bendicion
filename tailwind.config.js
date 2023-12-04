@@ -1,26 +1,3 @@
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   content: [
-//     './index.html',
-//     './src/**/*.{js,ts,jsx,tsx}'
-//   ],
-//   theme: {
-//     extend: {
-//       colors: {
-//         primary: '#026473'
-//       },
-//       fontFamily: {
-//         fontFamily: {
-//           nunito: ['"Nunito"', 'sans-serif'],
-//           dosis: ['"Dosis"', 'sans-serif'],
-//           kumbh: ['"Kumbh Sans"', 'sans-serif']
-//         }
-//       }
-//     }
-//   },
-//   plugins: []
-// }
-// tailwind.config.js
 const { nextui } = require('@nextui-org/theme')
 
 /** @type {import('tailwindcss').Config} */
@@ -47,6 +24,9 @@ module.exports = {
         myorange: '#ec6a52',
         mygreen: '#2ddb3f',
         mypink: '#f3b7ad'
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite'
       }
     }
   },

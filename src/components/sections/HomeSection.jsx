@@ -13,7 +13,7 @@ function HomeSection () {
   return (
     <section ref={homeSection} className='section-site flex z-30'>
       <Carousel />
-      <main className='flex-1 container px-10 relative z-20 mx-auto w-full h-screen flex flex-col lg:flex-row gap-5 lg:gap-20 items-center justify-center'>
+      <main className='flex-1 container px-10 py-20 md:py-10 relative z-20 mx-auto w-full min-h-screen flex flex-col lg:flex-row gap-5 lg:gap-20 items-center justify-center'>
         <div className='content text-center lg:text-left'>
           <h1 className='text-mygray text-4xl font-bold uppercase font-dosis'>Somos <strong className='text-mygold'>radio bendición <br /> 90.5 fm</strong></h1>
           <h2 className='text-mypink text-xl font-bold uppercase font-kumbh'>Samugari</h2>

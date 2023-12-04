@@ -22,7 +22,7 @@ import msm from './../assets/images/imgdisco.jpg'
 import mision from './../assets/images/mission.svg'
 import vision from './../assets/images/vision.svg'
 
-export const urlStreamRadio = 'https://sp.dattavolt.com/8074/stream'
+export const urlStreamRadio = 'http://stream.zeno.fm/p1als7syrtmuv'
 
 export {
   palma1,
