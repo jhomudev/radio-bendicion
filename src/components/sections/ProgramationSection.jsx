@@ -27,7 +27,7 @@ function ProgramationSection () {
           </p>
         </div>
         <br />
-        <div className='container px-2 mx-auto grid gap-5 grid-cols-[repeat(auto-fit,minmax(250px,1fr))]'>
+        <div className='container px-2 mx-auto grid gap-5 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]'>
           {
             genres.map(genre => (
               <Card key={genre.id} data-aos='zoom-in-down' data-aos-duration='1000' className='py-4 bg-white w-full shadow-lg hover:!translate-x-1 hover:!translate-y-1 transition-transform duration-100'>

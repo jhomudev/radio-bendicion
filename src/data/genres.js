@@ -4,7 +4,7 @@ const genres = [
   {
     id: 1,
     image: quechua,
-    title: 'programación en quechua',
+    title: 'quechua',
     descri: 'Para todo el público quechuahablante.',
     hour: '4:00 am - 5:00 am'
   },

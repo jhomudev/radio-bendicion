@@ -36,9 +36,9 @@ function ContactsSection () {
             className='college flex flex-wrap justify-center gap-5 sm:gap-10 max-w-[1050px] mt-0 sm:mt-10'
             data-aos='fade-right' data-aos-duration='500'
           >
-            <img className='w-[40%] sm:w-[35%] rounded-md rotate-3' src={rimg1} alt='radio bendición samugari' />
-            <img className='w-[40%] sm:w-[35%] rounded-md -rotate-3' src={rimg2} alt='radio bendición samugari' />
-            <img className='w-[40%] sm:w-[35%] rounded-md rotate-3' src={rimg3} alt='radio bendición samugari' />
+            <img className='hidden md:block w-[40%] sm:w-[35%] rounded-md rotate-3' src={rimg1} alt='radio bendición samugari' />
+            <img className='hidden md:block w-[40%] sm:w-[35%] rounded-md -rotate-3' src={rimg2} alt='radio bendición samugari' />
+            <img className='w-10/12 md:w-[40%] rounded-md md:rotate-3' src={rimg3} alt='radio bendición samugari' />
           </div>
           <div data-aos='fade-left' data-aos-duration='500'>
             <h4 className='text-myblue font-kumbh mb-3'>Nuestros contactos</h4>

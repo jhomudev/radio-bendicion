@@ -3,8 +3,6 @@ import HomeSection from './components/sections/HomeSection'
 import AboutSection from './components/sections/AboutSection'
 import ContactsSection from './components/sections/ContactsSection'
 import ProgramationSection from './components/sections/ProgramationSection'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { Button } from '@nextui-org/button'
@@ -14,10 +12,6 @@ import usePage from './hooks/usePage'
 
 function App () {
   const { scrollToSection, section } = usePage()
-
-  useEffect(() => {
-    AOS.init()
-  }, [])
 
   useEffect(() => {
     scrollToSection(section.current)

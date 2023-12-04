@@ -3,6 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.section-site{
+.section-site {
   @apply relative w-full min-h-screen overflow-hidden;
 }
