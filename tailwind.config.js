@@ -8,7 +8,7 @@ module.exports = {
     // single component styles
     // './node_modules/@nextui-org/theme/dist/components/button.js',
     // or you can use a glob pattern (multiple component styles)
-    './node_modules/@nextui-org/theme/dist/components/(button|navbar|link).js'
+    './node_modules/@nextui-org/theme/dist/components/(button|navbar|link|slider).js'
   ],
   theme: { /* 01253e,9dbdba,f8b042,ec6a52,f3b7ad */
     extend: {

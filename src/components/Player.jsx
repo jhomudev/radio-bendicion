@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPause, faPlay, faVolumeHigh, faVolumeMute } from '@fortawesome/free-solid-svg-icons'
 import usePlayer from '../hooks/usePlayer'
 import { useEffect } from 'react'
+import { Slider } from '@nextui-org/slider'
 
 function Player () {
   const {
@@ -14,6 +15,10 @@ function Player () {
     changeVolume,
     togglePlay
   } = usePlayer()
+
+  const handleChangeVolume = (value) => {
+    changeVolume(value)
+  }
 
   useEffect(() => {
     audio.current.volume = isPlay ? volume : 0
@@ -44,11 +49,28 @@ function Player () {
             />
             <span className='bg-white border-2 border-myorange p-4 rounded-full z-10' />
           </div>
-          <div className='mediaplayer -mt-16 z-20 backdrop-blur-sm bg-myorange/50 shadow-sm px-4 py-3 rounded-md flex items-center justify-center gap-2'>
+          <div className='w-full -mt-16 z-20 backdrop-blur-sm bg-myorange/50 shadow-sm px-4 py-3 rounded-md flex items-center justify-center gap-5'>
             <button onClick={togglePlay} className='grid place-items-center text-white hover:text-myorange text-3xl'>
               <FontAwesomeIcon icon={isPlay ? faPause : faPlay} />
             </button>
-            <div className='volume w-20 flex items-center gap-1'>
+            <Slider
+              aria-label='player volume'
+              size='md'
+              color='foreground'
+              step={0.01}
+              maxValue={1}
+              minValue={0}
+              defaultValue={volume}
+              hideThumb
+              classNames={{
+                filler: 'bg-white'
+              }}
+              startContent={
+                <button className='text-white' onClick={toggleMuted}><FontAwesomeIcon icon={isMuted ? faVolumeMute : faVolumeHigh} /></button>
+              }
+              onChange={handleChangeVolume}
+            />
+            {/* <div className='volume w-full flex items-center gap-1'>
               <button onClick={toggleMuted} className='grid place-items-center text-white hover:text-myorange text-sm'>
                 <FontAwesomeIcon icon={isMuted ? faVolumeMute : faVolumeHigh} />
               </button>
@@ -59,9 +81,8 @@ function Player () {
                 min='0'
                 value={volume}
                 step={0.1}
-                onChange={changeVolume}
               />
-            </div>
+            </div> */}
           </div>
         </div>
         <audio
