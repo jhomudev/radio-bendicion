@@ -41,7 +41,7 @@ function Player () {
           <span className='text-sm  leading-tight'>Palmapampa - Samugari</span>
         </div>
         <div className='relative z-10 bg-white border-2 border-myorange w-full -mt-2 py-3 px-5 grid place-items-center gap-3 rounded-lg'>
-          <div className={`${isPlay && 'animate-spin-slow'} relative w-56 h-56 sm:w-64 sm:h-64 border-2 border-myorange shadow-xl rounded-full overflow-hidden grid place-items-center transition-all duration-500`}>
+          <div className=' relative w-56 h-56 sm:w-64 sm:h-64 border-2 border-myorange shadow-xl rounded-full overflow-hidden grid place-items-center transition-all duration-500'>
             <img
               src={logoRadio}
               className='absolute w-full h-full aspect-video object-fill'
