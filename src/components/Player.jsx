@@ -1,4 +1,4 @@
-import { msm, urlStreamRadio } from '../data/media'
+import { logoRadio, urlStreamRadio } from '../data/media'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPause, faPlay, faVolumeHigh, faVolumeMute } from '@fortawesome/free-solid-svg-icons'
 import usePlayer from '../hooks/usePlayer'
@@ -43,9 +43,9 @@ function Player () {
         <div className='relative z-10 bg-white border-2 border-myorange w-full -mt-2 py-3 px-5 grid place-items-center gap-3 rounded-lg'>
           <div className={`${isPlay && 'animate-spin-slow'} relative w-56 h-56 sm:w-64 sm:h-64 border-2 border-myorange shadow-xl rounded-full overflow-hidden grid place-items-center transition-all duration-500`}>
             <img
-              src={msm}
+              src={logoRadio}
               className='absolute w-full h-full aspect-video object-fill'
-              alt='gospel'
+              alt='radio bendicion samugari logo'
             />
             <span className='bg-white border-2 border-myorange p-4 rounded-full z-10' />
           </div>
@@ -70,19 +70,6 @@ function Player () {
               }
               onChange={handleChangeVolume}
             />
-            {/* <div className='volume w-full flex items-center gap-1'>
-              <button onClick={toggleMuted} className='grid place-items-center text-white hover:text-myorange text-sm'>
-                <FontAwesomeIcon icon={isMuted ? faVolumeMute : faVolumeHigh} />
-              </button>
-              <input
-                type='range'
-                className='w-full h-1 rounded-full bg-blue-100 appearance-none '
-                max='1'
-                min='0'
-                value={volume}
-                step={0.1}
-              />
-            </div> */}
           </div>
         </div>
         <audio

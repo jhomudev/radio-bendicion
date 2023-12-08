@@ -1,4 +1,5 @@
 import logo from './../assets/logotipo.svg'
+import logoRadio from './../assets/logo-radio.png'
 // Imagenes para el slider/carrusel
 import palma1 from './../assets/images/palma-1.jpg'
 import palma2 from './../assets/images/palma-2.jpg'
@@ -29,6 +30,7 @@ export {
   palma2,
   palma3,
   logo,
+  logoRadio,
   gospel,
   huayno,
   infantil,
