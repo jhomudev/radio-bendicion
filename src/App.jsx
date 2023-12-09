@@ -9,9 +9,11 @@ import { Button } from '@nextui-org/button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import usePage from './hooks/usePage'
+import { motion, useScroll } from 'framer-motion'
 
 function App () {
   const { scrollToSection, section } = usePage()
+  const { scrollYProgress } = useScroll()
 
   useEffect(() => {
     scrollToSection(section.current)
@@ -19,6 +21,10 @@ function App () {
 
   return (
     <div className='relative w-full flex flex-col font-nunito scroll-smooth'>
+      <motion.div
+        style={{ scaleX: scrollYProgress }}
+        className='fixed left-0 top-0 z-50 w-full h-2 bg-primary origin-left'
+      />
       <Header />
       <HomeSection />
       <ProgramationSection />
@@ -26,8 +32,16 @@ function App () {
       <AboutSection />
       <Footer />
       <Button
-        isIconOnly color='warning' variant='faded' aria-label='Subir'
-        className='fixed bottom-5 right-5'
+        as={motion.button}
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1
+        }}
+        aria-label='Ir arriba'
+        className='fixed bottom-5 z-20 right-5'
+        isIconOnly
+        color='warning'
+        variant='faded'
         onPress={() => { scrollToSection() }}
       >
         <FontAwesomeIcon icon={faArrowUp} />

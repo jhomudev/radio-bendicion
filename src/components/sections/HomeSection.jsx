@@ -5,6 +5,7 @@ import Carousel from './../Carousel'
 import Player from './../Player'
 import usePlayer from '../../hooks/usePlayer'
 import usePage from '../../hooks/usePage'
+import { motion } from 'framer-motion'
 
 function HomeSection () {
   const { isPlay, togglePlay } = usePlayer()
@@ -15,13 +16,33 @@ function HomeSection () {
       <Carousel />
       <main className='flex-1 container px-10 py-20 md:py-10 relative z-20 mx-auto w-full min-h-screen flex flex-col lg:flex-row gap-5 lg:gap-20 items-center justify-center'>
         <div className='content text-center lg:text-left'>
-          <h1 className='text-mygray text-4xl font-bold uppercase font-dosis'>Somos <strong className='text-mygold'>radio bendición <br /> 90.5 fm</strong></h1>
-          <h2 className='text-mypink text-xl font-bold uppercase font-kumbh'>Samugari</h2>
-          <p className='mt-3 text-mygray font-kumbh'>La radio que te bendice y edifica tu espíritu. Somos una radio digital que transmite desde Perú para todo el el público en general de habla quechua y hispana.</p>
-          <p className='text-mygray italic mt-3 '>"Aclamad con júbilo al SEÑOR, toda la tierra; prorrumpid y cantad con gozo, cantad alabanzas." <wbr />Salmos 98:4 </p>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0, transition: { type: 'spring' } }}
+          >
+            <h1 className='text-mygray text-4xl font-bold uppercase font-dosis'>Somos <strong className='text-mygold'>Radio bendición <br /> 90.5 FM</strong>
+            </h1>
+            <h2 className='text-myorange text-xl font-bold uppercase font-kumbh'>Samugari</h2>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0, transition: { type: 'tween', duration: 1 } }}
+          >
+            <p className='mt-3 text-mygray font-kumbh'>La radio que te bendice y edifica tu espíritu. Somos una radio digital que transmite desde Perú para todo el el público en general de habla quechua y hispana.</p>
+            <p className='text-mygray italic mt-3 '>"Aclamad con júbilo al SEÑOR, toda la tierra; prorrumpid y cantad con gozo, cantad alabanzas." <wbr />Salmos 98:4 </p>
+          </motion.div>
           <br />
-          <Button variant='solid' size='lg' color='secondary' onPress={togglePlay}>
-            <FontAwesomeIcon icon={isPlay ? faPause : faPlay} />
+          <Button
+            aria-label='Reproducir o pausar radio'
+            as={motion.button}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1, transition: { type: 'tween', duration: 1 } }}
+            variant='solid'
+            size='lg'
+            color='secondary'
+            startContent={<FontAwesomeIcon icon={isPlay ? faPause : faPlay} />}
+            onPress={togglePlay}
+          >
             {isPlay ? 'Pause' : 'Play'}
           </Button>
         </div>
