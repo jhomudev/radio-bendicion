@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import { rimg1, rimg2, rimg3 } from '../../data/media'
-import usePage from '../../hooks/usePage'
+import { rimg1, rimg2, rimg3 } from '@/data/media'
 import { motion } from 'framer-motion'
+import { usePage } from '@/hooks'
 
 function ContactsSection () {
   const { contactsSection } = usePage()

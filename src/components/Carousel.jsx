@@ -19,7 +19,9 @@ function Carousel () {
     const imgNode = carouselNode.querySelectorAll('.slider_item')[currentIndex]
     if (imgNode) {
       imgNode.scrollIntoView({
-        behavior: 'smooth'
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'start'
       })
     }
   }, [currentIndex])

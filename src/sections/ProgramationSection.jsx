@@ -1,6 +1,6 @@
-import usePage from '../../hooks/usePage'
+import { ListGenres } from '@/components'
+import { usePage } from '@/hooks'
 import { motion } from 'framer-motion'
-import ListGenres from '../ListGenres'
 
 function ProgramationSection () {
   const { progSection } = usePage()

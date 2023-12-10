@@ -1,15 +1,11 @@
 import { useEffect } from 'react'
-import HomeSection from './components/sections/HomeSection'
-import AboutSection from './components/sections/AboutSection'
-import ContactsSection from './components/sections/ContactsSection'
-import ProgramationSection from './components/sections/ProgramationSection'
-import Footer from './components/Footer'
-import Header from './components/Header'
 import { Button } from '@nextui-org/button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
-import usePage from './hooks/usePage'
 import { motion, useScroll } from 'framer-motion'
+import { usePage } from './hooks'
+import { Header, Footer } from './components'
+import { HomeSection, ProgramationSection, ContactsSection, AboutSection } from './sections'
 
 function App () {
   const { scrollToSection, section } = usePage()

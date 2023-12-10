@@ -1,11 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons'
 import { Button } from '@nextui-org/button'
-import Carousel from './../Carousel'
-import Player from './../Player'
-import usePlayer from '../../hooks/usePlayer'
-import usePage from '../../hooks/usePage'
 import { motion } from 'framer-motion'
+import { usePlayer, usePage } from '@/hooks'
+import { Carousel, Player } from '@/components'
 
 function HomeSection () {
   const { isPlay, togglePlay } = usePlayer()

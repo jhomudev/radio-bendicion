@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { mision, vision } from '../../data/media'
-import usePage from '../../hooks/usePage'
+import { mision, vision } from '@/data/media'
+import { usePage } from '@/hooks'
 
 function AboutSection () {
   const { aboutSection } = usePage()
