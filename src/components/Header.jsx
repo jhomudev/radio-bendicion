@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { logo } from '../data/media'
+import { logoRadio } from '../data/media'
 import { Button } from '@nextui-org/button'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/navbar'
 import { Link } from '@nextui-org/link'
@@ -28,8 +28,8 @@ function Header () {
       />
       <NavbarBrand>
         <Link aria-hidden href='/'>
-          <figure className='w-[100px]'>
-            <img className='w-full h-full object-contain' src={logo} alt='logo radio bendicion' />
+          <figure className='w-[50px]'>
+            <img className='w-full h-full object-contain' src={logoRadio} alt='logo radio bendicion' />
           </figure>
         </Link>
       </NavbarBrand>
@@ -45,7 +45,7 @@ function Header () {
       <NavbarContent justify='end'>
         <NavbarItem>
           <Button
-            aria-label='Reproducir o pausar radio'
+            aria-label='play'
             color='secondary'
             variant='solid'
             startContent={<FontAwesomeIcon icon={isPlay ? faPause : faPlay} />}

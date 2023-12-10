@@ -37,7 +37,7 @@ function ContactsSection () {
             whileInView={{ opacity: 1, x: 0, transition: { type: 'tween', duration: 1 } }}
             viewport={{ once: true }}
           >
-            <h4 className='text-myblue font-kumbh mb-3'>Nuestros contactos</h4>
+            <h3 className='text-myblue font-kumbh mb-3'>Nuestros contactos</h3>
             <ul className='flex flex-col gap-3'>
               <li className='font-dosis flex items-center gap-3 justify-end'>
                 <a

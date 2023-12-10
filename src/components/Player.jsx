@@ -50,7 +50,7 @@ function Player () {
           </div>
           <div className='w-full -mt-16 z-20 backdrop-blur-sm bg-myblue/50 shadow-sm px-4 py-1 rounded-md flex items-center justify-center gap-5'>
             <Button
-              aria-label='Reproducir o pausar radio'
+              aria-label='play'
               size='lg'
               variant='light'
               className='w-16 h-w-16 data-[hover]:bg-foreground/10 text-white'

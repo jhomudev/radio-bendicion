@@ -10,16 +10,15 @@ function HomeSection () {
   const { homeSection } = usePage()
 
   return (
-    <section ref={homeSection} className='section-site flex z-30'>
+    <section ref={homeSection} className='section-site md:h-[calc(100vh_-_5rem)] md:min-h-fit flex z-30'>
       <Carousel />
-      <main className='flex-1 container px-10 py-20 md:py-10 relative z-20 mx-auto w-full min-h-screen flex flex-col lg:flex-row gap-5 lg:gap-20 items-center justify-center'>
+      <main className='flex-1 container px-10 py-20 md:py-10 relative z-20 mx-auto w-full flex flex-col lg:flex-row gap-5 lg:gap-20 items-center justify-center'>
         <div className='content text-center lg:text-left'>
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0, transition: { type: 'spring' } }}
           >
-            <h1 className='text-mygray text-4xl font-bold uppercase font-dosis'>Somos <strong className='text-mygold'>Radio bendición <br /> 90.5 FM</strong>
-            </h1>
+            <h1 className='text-mygray text-4xl font-bold uppercase font-dosis'>Somos <strong className='text-mygold'>Radio bendición <br /> 90.5 FM</strong></h1>
             <h2 className='text-myorange text-xl font-bold uppercase font-kumbh'>Samugari</h2>
           </motion.div>
           <motion.div
@@ -31,7 +30,7 @@ function HomeSection () {
           </motion.div>
           <br />
           <Button
-            aria-label='Reproducir o pausar radio'
+            aria-label='play'
             as={motion.button}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1, transition: { type: 'tween', duration: 1 } }}

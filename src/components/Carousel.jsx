@@ -82,7 +82,7 @@ function Carousel () {
                   aria-hidden
                   key={item.id}
                   onClick={() => { goToSlide(id) }}
-                  className={`p-1 rounded-full ${isThisSlide ? 'bg-mygreen' : 'bg-white'} hover:bg-mygreen`}
+                  className={`p-[6px] rounded-full ${isThisSlide ? 'bg-mygreen' : 'bg-white'} hover:bg-mygreen`}
                 />
               )
             })
