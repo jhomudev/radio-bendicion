@@ -42,7 +42,7 @@ function ContactsSection () {
               <li className='font-dosis flex items-center gap-3 justify-end'>
                 <a
                   aria-label='llamar a la radio'
-                  role='link' className='hover:underline' target='_blank' href='tel:+51966978585' rel='noreferrer'
+                  role='link' className='hover:underline' target='_blank' href='tel:+51966978585' rel='noopener noreferrer'
                 >988988070
                 </a>
                 <span className='text-lg'><FontAwesomeIcon icon={faPhone} /></span>
@@ -50,7 +50,7 @@ function ContactsSection () {
               <li className='font-dosis flex items-center gap-3 justify-end'>
                 <a
                   aria-label='escribir al whatsapp'
-                  role='link' className='hover:underline' target='_blank' href='https://api.whatsapp.com/send?phone=51988988070&text=RadioBendiciónPalmapampaSamugari.' rel='noreferrer'
+                  role='link' className='hover:underline' target='_blank' href='https://api.whatsapp.com/send?phone=51988988070&text=RadioBendiciónPalmapampaSamugari.' rel='noopener noreferrer'
                 >988988070
                 </a>
                 <span className='text-lg'>
@@ -60,7 +60,7 @@ function ContactsSection () {
               <li className='font-dosis flex items-center gap-3 justify-end'>
                 <a
                   aria-label='visitar pagina de facebook'
-                  role='link' className='hover:underline' target='_blank' href='https://www.facebook.com/profile.php?id=100089312583025' rel='noreferrer'
+                  role='link' className='hover:underline' target='_blank' href='https://www.facebook.com/profile.php?id=100089312583025' rel='noopener noreferrer'
                 >Radio bendicón Samugari
                 </a>
                 <span className='text-lg'>
@@ -70,7 +70,7 @@ function ContactsSection () {
               <li className='font-dosis flex items-center gap-3 justify-end'>
                 <a
                   aria-label='enviar correo'
-                  role='link' className='hover:underline' target='_blank' href='mailto:radiobendicion@gmail.com.' rel='noreferrer'
+                  role='link' className='hover:underline' target='_blank' href='mailto:radiobendicion@gmail.com.' rel='noopener noreferrer'
                 >radiobendicion@gmail.com.
                 </a>
                 <span className='text-lg'><FontAwesomeIcon icon={faEnvelope} /></span>

@@ -22,7 +22,7 @@ function ProgramationSection () {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0, transition: { type: 'tween', duration: 1 } }}
             viewport={{ once: true }}
-          >Nuestra emisora transmite desde las 4:00 am hasta las 9:00 pm. Tenemos una programación pensada para todo público cristiano, incluyendo programación infantil hasta juvenil y folcklorica, además de mensajes de la palabra de Dios. Disfrute de esta programación y que su vida se llene de la bendición del Señor a traves de nuestra señal.
+          >Nuestra emisora transmite desde las <time dateTime='04:00' className='font-semibold'>4:00 am</time> hasta las <time dateTime='21:00' className='font-semibold'>9:00 pm</time>. Tenemos una programación pensada para <strong>todo público cristiano</strong>, incluyendo programación infantil hasta juvenil y folcklorica, además de mensajes de la palabra de Dios. Disfrute de esta programación y que su vida se llene de la bendición del Señor a traves de nuestra señal.
           </motion.p>
         </div>
         <br />

@@ -21,7 +21,7 @@ function ListGenres () {
           >
             <CardHeader className='pb-0 pt-2 px-4 flex-col items-start'>
               <p className='text-tiny uppercase font-bold'>Programación</p>
-              <small className='text-default-500 line-clamp-1'>{genre.hour}</small>
+              <time className='text-sm text-default-500 line-clamp-1'>{genre.hour}</time>
               <strong className='font-bold text-sm uppercase'>{genre.title}</strong>
             </CardHeader>
             <CardBody className='w-full overflow-visible py-2 px-4 grid place-items-center'>

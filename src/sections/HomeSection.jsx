@@ -25,7 +25,7 @@ function HomeSection () {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0, transition: { type: 'tween', duration: 1 } }}
           >
-            <p className='mt-3 text-mygray font-kumbh'>La radio que te bendice y edifica tu espíritu. Somos una radio digital que transmite desde Perú para todo el el público en general de habla quechua y hispana.</p>
+            <p className='mt-3 text-mygray font-kumbh'>La radio que te bendice y edifica tu espíritu. Somos una <strong>radio digital</strong> que transmite desde <strong>Perú</strong> para todo el el público en general de habla quechua y hispana.</p>
             <p className='text-mygray italic mt-3 '>"Aclamad con júbilo al SEÑOR, toda la tierra; prorrumpid y cantad con gozo, cantad alabanzas." <wbr />Salmos 98:4 </p>
           </motion.div>
           <br />
