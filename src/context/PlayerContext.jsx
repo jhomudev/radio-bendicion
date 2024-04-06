@@ -4,7 +4,7 @@ export const PlayerContext = React.createContext()
 
 export default function PlayerProvider ({ children }) {
   const [isPlay, setIsPlay] = React.useState(false)
-  const [volume, setVolume] = React.useState(0.5)
+  const [volume, setVolume] = React.useState(1)
   const [isMuted, setIsMuted] = React.useState(false)
 
   const isFirstPlay = React.useRef(true)

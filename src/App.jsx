@@ -1,19 +1,24 @@
-import { useEffect } from 'react'
-import { Button } from '@nextui-org/button'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Button } from '@nextui-org/button'
 import { motion, useScroll } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { Footer, Header } from './components'
 import { usePage } from './hooks'
-import { Header, Footer } from './components'
-import { HomeSection, ProgramationSection, ContactsSection, AboutSection } from './sections'
+import { AboutSection, ContactsSection, HomeSection, ProgramationSection } from './sections'
 
 function App () {
   const { scrollToSection, section } = usePage()
-  const { scrollYProgress } = useScroll()
+  const { scrollYProgress, scrollY } = useScroll()
+  const [y, setY] = useState(0)
 
   useEffect(() => {
     scrollToSection(section.current)
   }, [section])
+
+  scrollY.on('change', (latest) => {
+    setY(latest)
+  })
 
   return (
     <div className='relative w-full flex flex-col font-nunito scroll-smooth'>
@@ -29,16 +34,13 @@ function App () {
       <Footer />
       <Button
         as={motion.button}
-        initial={{ opacity: 0 }}
-        whileInView={{
-          opacity: 1
-        }}
+        animate={{ opacity: y > 300 ? 1 : 0, transition: { type: 'tween', duration: 0.3 } }}
         aria-label='Ir arriba'
         className='fixed bottom-5 z-20 right-5'
         isIconOnly
         color='warning'
         variant='faded'
-        onPress={() => { scrollToSection() }}
+        onPress={() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }}
       >
         <FontAwesomeIcon icon={faArrowUp} />
       </Button>
